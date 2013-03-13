@@ -2,12 +2,16 @@ part of exercice_1;
 
 exo1_1()
 {
+  /*le programme qui calcule les intérêts accumulés (intérêts composés) 
+   * chaque année pendant 10 ans, par capitalisation d'une somme de 10000 $ 
+   * placée en banque au taux fixe de 5,5 %.
+   */
   var i;
   var cap_initial = 10000;
   var interet_annuel;
   for (var i=1; i<=10; i++)
       {
-    interet_annuel = (cap_initial*(1+0.55))-cap_initial; // formule a revoir
+    interet_annuel = (cap_initial*(1+0.55))-cap_initial;
     print("le cumul pour la ${i}iem année est ${interet_annuel}");
     cap_initial = interet_annuel+ cap_initial;
       }
@@ -15,7 +19,7 @@ exo1_1()
 
 
 exo1_2()
-{
+{// un programme qui calcule les 100 premiers termes de la table de multiplication par 14.
   var i = 1;
   var resultat;
   while(i<=100)
@@ -27,7 +31,7 @@ exo1_2()
 }
 
 exo1_3()
-{
+{//un programme qui affiche la suite de symboles suivante :
 
   print('    *');
   print('   ***');
@@ -38,7 +42,9 @@ exo1_3()
     
 }
 exo1_4(angl_rad)
-{
+{//un programme qui convertisse en degrés, minutes, secondes un angle fourni au départ en radians.
+
+
   /*voici  quelque lien pour la convertion:
    * http://fr.answers.yahoo.com/question/index?qid=20080521085715AA64LpB
    * http://www.commentcamarche.net/forum/affich-1711371-convertir-radians-en-degre
@@ -52,7 +58,7 @@ exo1_4(angl_rad)
 
 }
   
-  Map<String, int> Exo1_5(String phrase) {
+  Map<String, int> Exo1_5(String phrase) {//Écrivez un script qui compte le nombre d'occurrences du caractère « o » dans cette phrase.
     var cpt = 0;
     String phraseWoutSpaces = phrase.replaceAll('\n', '').
         replaceAll(' ', '').replaceAll('.', '');
@@ -74,7 +80,10 @@ exo1_4(angl_rad)
   }
 
 int exo1_6(chaine)
-  {
+  {/*un script qui détermine si une chaîne de caractères donnée est un palindrome 
+  (c'est-à-dire une chaîne qui peut se lire indifféremment dans les deux sens), 
+  comme par exemple « radar » ou « s.o.s ».
+   */
     int i,j,cpt;
     cpt=1;
     i=0;
@@ -98,7 +107,11 @@ int exo1_6(chaine)
       print("${chaine} n'est pas un palindrome "); 
     }
   }
-exo1_7(List maliste)
+exo1_7(List maliste)/*un programme qui analyse un par un tous les éléments d ’une liste de mots 
+(par exemple : ['Jean', 'Maximilien', 'Brigitte', 'Sonia', 'Jean-Pierre', 'Sandra']) 
+pour générer deux nouvelles listes. L’une contiendra les mots comportant moins de 6 caractères, 
+l’autre les mots comportant 6 caractères ou davantage. 
+  */
   {
   var listmotmoin_desixcar = new List();
   var listmotplus_desixcar = new List();
@@ -120,7 +133,7 @@ exo1_7(List maliste)
   }
 
 exo1_8(note)
- {
+ {//Convertir une note scolaire N quelconque en une note standardisée 
   var a = 'A';
   var b = 'B';
   var c = 'C';
@@ -154,8 +167,8 @@ else
         print("la note standardisée de ${note} est ${code}") ;                     
 
   }
-exo1_9()
-  {
+exo1_9()//un script qui affiche chacun des noms de la liste avec le nombre de caractères correspondant.
+ {
  List prenom = ['Jean-Michel', 'Marc', 'Vanessa', 'Anne', 'Maximilien', 'Alexandre-Benoît', 'Louise'];
   for ( var i=0; i<prenom.length; i++)
     {
@@ -163,25 +176,16 @@ exo1_9()
     }
   
   }
-//int compteMots(String ph)
-//  {
-//  var cpt = 0;
-//for (var i =0; i< ph.length; i++)
-//{
-//  if ((ph[i] ==' ')&&(ph[i+1] !=' '))
-//  cpt++; 
-//  }
-//
-//return cpt;
-//  }
-// 
-int compteMots(String phrase) {
+ 
+int compteMots(String ph) {/*fonction compteMots(ph) qui renvoie le nombre de mots contenus 
+dans la phrase ph. On considère comme mots les ensembles de caractères inclus entre des espaces.
+  */
   int cpt = 0;
- for (var i = 0; i<phrase.length - 1; i++ ) 
+ for (var i = 0; i<ph.length - 1; i++ ) 
   { 
-    if ((phrase[i]==' ')&&(phrase[i+1] !=' '))
+    if ((ph[i]==' ')&&(ph[i+1] !=' '))
       cpt ++;
   }
-  print("${cpt+1}");
+  print("""il y'a ${cpt+1} mot(s) dans la phrase "${ph}" """);
   return cpt;
 }  
