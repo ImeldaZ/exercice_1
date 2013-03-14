@@ -2,9 +2,9 @@ exercice_1
 =========
 SIO-2109 Hiver 2013
 
-#exercice_1
+#exercice_1 par Imelda ZONON 910 082 457
 
 **Categories**: Dart, Evaluation, Exercice 1
 
 **Description**:
-implémentation et utilisation de fonctions avec des fichiers différents.
+implï¿½mentation et utilisation de fonctions avec des fichiers diffï¿½rents.
